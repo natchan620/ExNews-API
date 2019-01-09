@@ -1,0 +1,2 @@
+cd exnews-api
+sudo docker build -t exnews-api . && docker run -d -p 80:5000 exnews-api

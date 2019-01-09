@@ -1,0 +1,15 @@
+<html>
+  <head>
+    <title>{{ context.ETH_TidebitPCT }}%({{ context.ETH_Gemini }}/{{ context.ETH_TidebitEquiv }})</title>
+    <meta http-equiv="refresh" content="5" >
+  </head>
+  <body>
+<tt>${{ context.ETH_Gemini }}</tt>: ETH Gemini Ask<br>
+<tt>${{ context.ETH_TidebitEquiv }}  {{ context.ETH_TidebitPCT }}% (HK${{ context.ETH_Tidebit }} x {{ context.ETH_TidebitDepth }} ETH)</tt>: ETH Tidebit Bid<br>
+<br>
+<tt>${{ context.BTC_Gemini }}</tt>: BTC Gemini Ask<br>
+<tt>${{ context.BTC_TidebitEquiv }}  {{ context.BTC_TidebitPCT }}% (HK${{ context.BTC_Tidebit }} x {{ context.BTC_TidebitDepth }} BTC)</tt>: BTC Tidebit Bid<br>
+<br>
+<tt>@{{ context.Rate }}</tt>: USDHKD Rate <br>
+  </body>
+</html>
