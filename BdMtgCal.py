@@ -3,6 +3,7 @@ from pdfminer.converter import TextConverter
 from pdfminer.layout import LAParams
 from pdfminer.pdfpage import PDFPage
 from io import StringIO
+from dateutil.parser import parse
 # import datefinder
 import pandas as pd
 # from pandas.tseries.offsets import CustomBusinessDay
@@ -10,7 +11,7 @@ import datetime
 import requests
 import numpy as np
 import re
-import dateparser
+# import dateparser
 
 
 def convert_pdf_to_txt(path):
@@ -45,7 +46,7 @@ def GetDate(filename):
     date_list = []
     for match in matches:
         print(match)
-        date_list.append(dateparser.parse(match[0]))
+        date_list.append(parse(match[0], fuzzy=True))
     bm_date = max(date_list)
     # # now_date = datetime.datetime.now(
     # #    pytz.timezone('Asia/Hong_Kong')).replace(tzinfo=None)

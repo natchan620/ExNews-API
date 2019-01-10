@@ -3,4 +3,3 @@ pandas
 pdfminer.six
 chardet
 requests
-dateparser
